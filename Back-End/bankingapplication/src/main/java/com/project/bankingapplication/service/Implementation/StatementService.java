@@ -2,9 +2,12 @@ package com.project.bankingapplication.service.Implementation;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.BillerStatement;
 import com.project.bankingapplication.repo.StatementRepository;
 
@@ -13,11 +16,17 @@ import com.project.bankingapplication.repo.StatementRepository;
 @Service
 public class StatementService {
 	
+	Logger logger = LoggerFactory.getLogger(StatementService.class);
+	
 	@Autowired
 	StatementRepository statementRepository;
 
 	public List<BillerStatement> listAllBillerStatement() {
 		// TODO Auto-generated method stub
+		logger.error("error happened");
+    	logger.debug("debug needed");
+    	logger.warn("warning");
+    	logger.info("infor message");
 		return statementRepository.findAll();
 	}
 

@@ -24,70 +24,83 @@ import com.project.bankingapplication.service.Implementation.ProviderService;
 import com.project.bankingapplication.service.Implementation.RegisterService;
 import com.project.bankingapplication.service.Implementation.StatementService;
 
-
-
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping(path="/registry")
+@RequestMapping(path = "/registry")
 public class RegistryController {
-	
-		Logger logger = LoggerFactory.getLogger(RegistryController.class);
 
-	    @Autowired
-	    ProviderService providerService;
-	    
-	    @Autowired
-	    RegisterService registerService;
-	    
-	    @Autowired
-	    StatementService statementService;
-	    
-	    
-	    
-	    //TO CREATE AN BILLER_REGISTER
-	    @PostMapping("/register")  	   
-	    public ResponseEntity<String> createNewRegister(@RequestBody BillerRegister billerRegister) {	
-	    	String strCreateStatus="Biller Registered Succesfully";
-	    	registerService.createNewRegistry(billerRegister);
-	    	logger.error("error happened");
-	    	logger.debug("debug needed");
-	    	logger.warn("just a warning");
-			return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
-			
-	    }
-	    
-	    //TO FIND AN REGISTER BILLER BY ID
-	    @GetMapping("/register/{id}")
-	    public ResponseEntity<BillerRegister> readRegister(@PathVariable long id)
-    	{
-	    	BillerRegister billerRegister=registerService.findById(id);
-    		return ResponseEntity.ok(billerRegister);
-        } 
+	Logger logger = LoggerFactory.getLogger(RegistryController.class);
+
+	@Autowired
+	ProviderService providerService;
+
+	@Autowired
+	RegisterService registerService;
+
+	@Autowired
+	StatementService statementService;
+
+	// TO CREATE AN BILLER_REGISTER
+	@PostMapping("/register")
+	public ResponseEntity<String> createNewRegister(@RequestBody BillerRegister billerRegister) {
+		String strCreateStatus = "Biller Registered Succesfully";
+		registerService.createNewRegistry(billerRegister);
+		logger.error("error happened");
+		logger.debug("debug needed");
+		logger.warn("warning");
+		logger.info("infor message");
+		return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
+
+	}
+
+	// TO FIND AN REGISTER BILLER BY ID
+	@GetMapping("/register/{id}")
+	public ResponseEntity<BillerRegister> readRegister(@PathVariable long id) {
+		logger.error("error happened");
+		logger.debug("debug needed");
+		logger.warn("warning");
+		logger.info("infor message");
+		BillerRegister billerRegister = registerService.findById(id);
+		return ResponseEntity.ok(billerRegister);
+	}
+
 //	----------------------------------------------  //  
-	    //TO CREATE AN BILLER_PROVIDER 
-	    @PostMapping("/provider")  	   
-	    public ResponseEntity<String> createNewProvider(@RequestBody BillerProvider billerProvider) {
-	    	String strCreateStatus="Biller Provided Succesfully";
-	    	providerService.createNewProvider(billerProvider);
-			return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
-	    }
-	    
-	    //TO READ AN EXISTING PROVIDER BY ID   
-        @GetMapping("/provider/{id}")      
-        public ResponseEntity<BillerProvider> readProvider(@PathVariable long id)
-        	{
-        		BillerProvider billerProvider= providerService.findBillerProviderById(id);
-        		return ResponseEntity.ok(billerProvider);
-            }             
- //-------------------------------------------------//
-      // TO LIST ALL STATEMENTS
-      @GetMapping("/statement")
-	   public ResponseEntity<List<BillerStatement>>listAllBillerStatement() 
-	   
-      {
-   	   List<BillerStatement> billerStatement=statementService.listAllBillerStatement();
-   	   return ResponseEntity.ok(billerStatement);
-  
-      }
-               
+	// TO CREATE AN BILLER_PROVIDER
+	@PostMapping("/provider")
+	public ResponseEntity<String> createNewProvider(@RequestBody BillerProvider billerProvider) {
+		String strCreateStatus = "Biller Provided Succesfully";
+		logger.error("error happened");
+		logger.debug("debug needed");
+		logger.warn("warning");
+		logger.info("infor message");
+		providerService.createNewProvider(billerProvider);
+		return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
+	}
+
+	// TO READ AN EXISTING PROVIDER BY ID
+	@GetMapping("/provider/{id}")
+	public ResponseEntity<BillerProvider> readProvider(@PathVariable long id) {
+		logger.error("error happened");
+		logger.debug("debug needed");
+		logger.warn("warning");
+		logger.info("infor message");
+		BillerProvider billerProvider = providerService.findBillerProviderById(id);
+		return ResponseEntity.ok(billerProvider);
+	}
+
+	// -------------------------------------------------//
+	// TO LIST ALL STATEMENTS
+	@GetMapping("/statement")
+	public ResponseEntity<List<BillerStatement>> listAllBillerStatement()
+
+	{
+		logger.error("error happened");
+    	logger.debug("debug needed");
+    	logger.warn("warning");
+    	logger.info("infor message");
+		List<BillerStatement> billerStatement = statementService.listAllBillerStatement();
+		return ResponseEntity.ok(billerStatement);
+
+	}
+
 }
