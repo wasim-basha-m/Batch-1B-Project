@@ -14,11 +14,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.project.bankingapplication.entity.BillerRegister;
 import com.project.bankingapplication.entity.BillerStatement;
-import com.project.bankingapplication.repo.RegisterRepository;
 import com.project.bankingapplication.repo.StatementRepository;
-import com.project.bankingapplication.service.Implementation.RegisterService;
 import com.project.bankingapplication.service.Implementation.StatementService;
 
 @ExtendWith(MockitoExtension.class)
@@ -28,23 +25,6 @@ public class BillerServiceTest {
 
 	@Mock
 	StatementRepository statementRepository;
-
-	@InjectMocks
-	RegisterService registerService;
-
-	@Mock
-	RegisterRepository registerRepository;
-	
-	//Test for Biller 
-	@Test
-	public void createAndReadRegister() {
-		
-		
-		BillerRegister bReg = registerService.findById(2L);
-		assertEquals("Airtel",bReg.getBillerName());
-
-		
-	}
 
 	// Test for BillerStatement
 	@Test
