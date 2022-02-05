@@ -9,7 +9,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Container from "@material-ui/core/Container";
 import FormControl from "@material-ui/core/FormControl";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 function BillerRegister() {
   const [billerName, setBillerName] = useState("");
@@ -69,7 +69,7 @@ function BillerRegister() {
             />
           </Box>
           <br></br>
-          <Button variant="contained" onClick={handleClick} className="btn">
+          <Button variant="contained" onClick={handleClick} className="myButton">
             Register
           </Button>
           <br></br>

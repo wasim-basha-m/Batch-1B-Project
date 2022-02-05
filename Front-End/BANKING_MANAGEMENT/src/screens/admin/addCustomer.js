@@ -9,7 +9,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AddCustomer = (props) => {
-  const [accountNumber, setAccountNumber] = useState("");
+  const accountNumber1=Math.floor(Math.random()*900001) + 100002;
+  const [accountNumber, setAccountNumber] = useState(accountNumber1);
   const [accountBalance, setAccountBalance] = useState("");
   const [cifNo, setCIFNo] = useState("");
   const [branchName, setBranchName] = useState("");
@@ -90,12 +91,15 @@ const AddCustomer = (props) => {
             <Form.Group as={Col}>
               <label className="form-label">Account Number</label>
               <input
-                onChange={(e) => {
-                  setAccountNumber(e.target.value);
-                }}
+                // onChange={(e) => {
+                //   setAccountNumber(e.target.value);
+
+                // }}
+
                 type="text"
-                maxLength="10"
+                // maxLength="10"
                 value={accountNumber}
+                readOnly
                 placeholder="please enter numbers only"
                 className="form-control bg-dark text-white"
               />

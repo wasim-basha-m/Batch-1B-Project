@@ -9,24 +9,29 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import Container from "@material-ui/core/Container";
 import FormControl from "@material-ui/core/FormControl";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
-function BillerProvider() {
+function BillerProvider(props) {
   const [consumerNumberFk, setConsumerNumberFk] = useState("");
+  const cust = JSON.parse(sessionStorage.getItem("customer"));
+
   const [accNumber, setAccNumber] = useState("");
   const [amount, setAmount] = useState("");
   const [provider] = useState("");
 
   const handleClick = (e) => {
     e.preventDefault();
+    setAccNumber(cust.savingsAccount.accNumber)
     const customer = { consumerNumberFk, accNumber, amount };
     console.log(provider);
+    console.log("accnumber"+cust.savingsAccount.accountNumber)
+    console.log(JSON.stringify(customer))
     fetch("http://localhost:8080/ebanking/registry/provider/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(customer),
     }).then(() => {
-      alert("go to payment page...");
+      alert("Payment Succesfull...");
     });
   };
 
@@ -42,15 +47,24 @@ function BillerProvider() {
           <Box className="cons-number">
             <TextField
               required
-              label="ConsumerNumber"
+              label="Consumer Number"
               defaultValue=""
               placeholder="mob or cons number"
               value={consumerNumberFk}
               onChange={(e) => setConsumerNumberFk(e.target.value)}
             />
           </Box>
-          <Box className="biller-Select">
-            <FormControl variant="filled" fullWidth>
+          <Box className="">
+            <Box>
+                <TextField
+                required
+                  label="Account Number"
+                  placeholder={cust.savingsAccount.accountNumber}
+                  value={accNumber}
+                  onChange={(e) => setAccNumber(e.target.value)}
+                />
+            </Box>
+            {/* <FormControl variant="filled" fullWidth>
               <InputLabel>Acc Number</InputLabel>
               <Select
                 labelId="demo-simple-select-filled-label"
@@ -65,7 +79,7 @@ function BillerProvider() {
                 <MenuItem value="101">101</MenuItem>
                 <MenuItem value="102">102</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
           </Box>
           <Box id="cons-number">
             <TextField
@@ -77,8 +91,9 @@ function BillerProvider() {
               onChange={(e) => setAmount(e.target.value)}
             />
           </Box>
+
           <br></br>
-          <Button variant="contained" onClick={handleClick} className="btn">
+          <Button variant="contained" onClick={handleClick} className="myButton">
             Pay
           </Button>
           <br></br>
