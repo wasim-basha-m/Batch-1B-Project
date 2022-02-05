@@ -1,0 +1,62 @@
+2022-02-05 12:01:49.836  INFO 4712 --- [restartedMain] c.p.b.BankingapplicationApplication      : Starting BankingapplicationApplication using Java 1.8.0_261 on Muhammed-Arshad with PID 4712 (D:\Collabera\Batch-1B-Project\JavaBackend\JavaBE\bankingapplication\target\classes started by user in D:\Collabera\Batch-1B-Project\JavaBackend\JavaBE\bankingapplication)
+2022-02-05 12:01:49.838  INFO 4712 --- [restartedMain] c.p.b.BankingapplicationApplication      : No active profile set, falling back to default profiles: default
+2022-02-05 12:01:50.230  INFO 4712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-05 12:01:50.231  INFO 4712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-05 12:01:52.804  INFO 4712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-05 12:01:53.344  INFO 4712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 519 ms. Found 8 JPA repository interfaces.
+2022-02-05 12:01:56.255  INFO 4712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-05 12:01:56.291  INFO 4712 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-05 12:01:56.292  INFO 4712 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-05 12:01:56.649  INFO 4712 --- [restartedMain] o.a.c.c.C.[.[localhost].[/ebanking]      : Initializing Spring embedded WebApplicationContext
+2022-02-05 12:01:56.652  INFO 4712 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6420 ms
+2022-02-05 12:01:58.696  INFO 4712 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-05 12:01:59.012  INFO 4712 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-05 12:02:01.812  INFO 4712 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-05 12:02:04.510  WARN 4712 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-02-05 12:02:05.906  WARN 4712 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-05 12:02:07.674  INFO 4712 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-05 12:02:07.804  INFO 4712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/ebanking'
+2022-02-05 12:02:07.863  INFO 4712 --- [restartedMain] c.p.b.BankingapplicationApplication      : Started BankingapplicationApplication in 19.204 seconds (JVM running for 20.633)
+2022-02-05 12:02:18.836  INFO 4712 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/ebanking]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-05 12:02:18.836  INFO 4712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-05 12:02:18.847  INFO 4712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2022-02-05 12:02:19.309 ERROR 4712 --- [http-nio-8080-exec-1] c.p.b.controller.RegistryController      : error happened
+2022-02-05 12:02:19.310  WARN 4712 --- [http-nio-8080-exec-1] c.p.b.controller.RegistryController      : just a warning
+2022-02-05 12:04:10.544  INFO 1852 --- [main] c.p.b.Biller.BillerEntityTest            : Starting BillerEntityTest using Java 1.8.0_261 on Muhammed-Arshad with PID 1852 (started by user in D:\Collabera\Batch-1B-Project\JavaBackend\JavaBE\bankingapplication)
+2022-02-05 12:04:10.547  INFO 1852 --- [main] c.p.b.Biller.BillerEntityTest            : No active profile set, falling back to default profiles: default
+2022-02-05 12:04:14.379  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-05 12:04:14.606  INFO 1852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 209 ms. Found 8 JPA repository interfaces.
+2022-02-05 12:04:18.729  INFO 1852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-05 12:04:19.271  INFO 1852 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-05 12:04:22.346  INFO 1852 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-05 12:28:54.008  INFO 3560 --- [restartedMain] c.p.b.BankingapplicationApplication      : Starting BankingapplicationApplication using Java 1.8.0_261 on Muhammed-Arshad with PID 3560 (D:\Collabera\Batch-1B-Project\JavaBackend\JavaBE\bankingapplication\target\classes started by user in D:\Collabera\Batch-1B-Project\JavaBackend\JavaBE\bankingapplication)
+2022-02-05 12:28:54.014 DEBUG 3560 --- [restartedMain] c.p.b.BankingapplicationApplication      : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-02-05 12:28:54.014  INFO 3560 --- [restartedMain] c.p.b.BankingapplicationApplication      : No active profile set, falling back to default profiles: default
+2022-02-05 12:28:54.334  INFO 3560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-05 12:28:54.334  INFO 3560 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-05 12:28:57.167  INFO 3560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-05 12:28:57.450  INFO 3560 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 257 ms. Found 8 JPA repository interfaces.
+2022-02-05 12:29:00.757  INFO 3560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-02-05 12:29:00.792  INFO 3560 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-05 12:29:00.792  INFO 3560 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-05 12:29:01.126  INFO 3560 --- [restartedMain] o.a.c.c.C.[.[localhost].[/ebanking]      : Initializing Spring embedded WebApplicationContext
+2022-02-05 12:29:01.127  INFO 3560 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6791 ms
+2022-02-05 12:29:02.421  INFO 3560 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-05 12:29:02.748  INFO 3560 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-05 12:29:03.015  INFO 3560 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-05 12:29:03.343  INFO 3560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-02-05 12:29:04.067  INFO 3560 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-02-05 12:29:04.230  INFO 3560 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-05 12:29:06.537  INFO 3560 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-05 12:29:06.560  INFO 3560 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-05 12:29:09.584  WARN 3560 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-02-05 12:29:11.117  WARN 3560 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-05 12:29:12.958  INFO 3560 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-05 12:29:13.029  INFO 3560 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/ebanking'
+2022-02-05 12:29:13.069  INFO 3560 --- [restartedMain] c.p.b.BankingapplicationApplication      : Started BankingapplicationApplication in 20.194 seconds (JVM running for 22.457)
+2022-02-05 12:29:29.399  INFO 3560 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/ebanking]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-05 12:29:29.399  INFO 3560 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-05 12:29:29.401  INFO 3560 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-05 12:29:30.029 ERROR 3560 --- [http-nio-8080-exec-2] c.p.b.controller.RegistryController      : error happened
+2022-02-05 12:29:30.029 DEBUG 3560 --- [http-nio-8080-exec-2] c.p.b.controller.RegistryController      : debug needed
+2022-02-05 12:29:30.030  WARN 3560 --- [http-nio-8080-exec-2] c.p.b.controller.RegistryController      : just a warning
