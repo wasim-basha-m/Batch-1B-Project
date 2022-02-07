@@ -38,9 +38,11 @@ const BillerStatement = () => {
           </Container>
         </Navbar>
         <div className="state-body">
-          <h1><center>Statement</center></h1>
+          <h1>
+            <center>Statement</center>
+          </h1>
           <table id="statement" className="table table-bordered table-dark">
-            <thead className="thead-dark">
+            <thead className="thead-light">
               <tr>
                 <td>Id</td>
                 <td> Account No</td>
@@ -71,19 +73,18 @@ const BillerStatement = () => {
             </tbody>
           </table>
           <div>
-          <ReactHTMLTableToExcel
-            className="btn btn-info"
-            table="statement"
-            filename="ReportExcel"
-            sheet="Sheet"
-            buttonText="Export excel"
-          />
-          <Button onClick={DounloadStatementa} className="myButton">
-            Export Pdf
-          </Button>
+            <ReactHTMLTableToExcel
+              className="btn btn-info"
+              table="statement"
+              filename="ReportExcel"
+              sheet="Sheet"
+              buttonText="Export excel"
+            />
+            <Button onClick={DounloadStatementa} className="myButton">
+              Export Pdf
+            </Button>
+          </div>
         </div>
-        </div>
-        
       </Container>
     </div>
   );
