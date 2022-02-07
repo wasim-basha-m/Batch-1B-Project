@@ -64,27 +64,27 @@ const ListCustomer = (props) => {
                 response.map((list) => {
                   return (
                     <tr>
-                    <td>{list.firstName}</td>
-                    <td>{list.lastName}</td>
-                    <td>{list.email}</td>
-                    <td>{list.mobileNo}</td>
-                    <td>{list.savingsAccount.accountNumber}</td>
-                    <td>{list.savingsAccount.accountBalance}</td>
-                    <td>{list.savingsAccount.branchName}</td>
-                    <td>{list.savingsAccount.isNetBankingActive}</td>
-                    <td>
-                      <button
-                        size="md"
-                        type="button"
-                        class="btn btn-danger"
-                        onClick={() => {
-                          onDelete(list.customerId);
-                        }}
-                      >
-                        DELETE
-                      </button>
-                    </td>
-                  </tr>
+                      <td>{list.firstName}</td>
+                      <td>{list.lastName}</td>
+                      <td>{list.email}</td>
+                      <td>{list.mobileNo}</td>
+                      <td>{list.savingsAccount.accountNumber}</td>
+                      <td>{list.savingsAccount.accountBalance}</td>
+                      <td>{list.savingsAccount.branchName}</td>
+                      <td>{list.savingsAccount.isNetBankingActive}</td>
+                      <td>
+                        <button
+                          size="md"
+                          type="button"
+                          class="btn btn-danger"
+                          onClick={() => {
+                            onDelete(list.customerId);
+                          }}
+                        >
+                          DELETE
+                        </button>
+                      </td>
+                    </tr>
                   );
                 })}
             </tbody>

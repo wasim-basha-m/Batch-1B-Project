@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
 import { CustFundTransfer } from "../../actions/customerActions/customerAction";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,7 +28,12 @@ const CustomerFundTransfer = (props) => {
   };
 
   const onTransfer = () => {
-    dispatch(CustFundTransfer(senderAccountNo, reciverAccountNo, amount));
+    if (amount > 0) {
+      dispatch(CustFundTransfer(senderAccountNo, reciverAccountNo, amount));
+    } else {
+      toast.error("Enter Proper Amount To Transfer", { autoClose: 1000 });
+      clearForm();
+    }
   };
 
   useEffect(() => {
@@ -39,7 +43,7 @@ const CustomerFundTransfer = (props) => {
       toast.success("Transaction successful..!!", { autoClose: 2000 });
       clearForm();
       //<Redirect to="/custhome" />;
-    } else if (response != "Transaction done Successfully") {
+    } else if (response !== "Transaction done Successfully") {
       //alert(response.error);
       toast.error(response, {
         autoClose: 3000,
@@ -83,12 +87,14 @@ const CustomerFundTransfer = (props) => {
             <div className="mb-3">
               <label className="form-label">Amount </label>
               <input
+                type="number"
                 onChange={(e) => {
                   setAmount(e.target.value);
                 }}
                 className="form-control"
                 value={amount}
-                placeholder="0"
+                placeholder="Enter Amount"
+                min={0}
               />
             </div>
             <div className="mb-3">
