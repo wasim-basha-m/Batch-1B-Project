@@ -12,6 +12,8 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +27,9 @@ import com.project.bankingapplication.service.Interfaces.ITransactionService;
 @Service      				// to tell sc that this is a service class(business logic )
 @Transactional
 public class TransactionServiceImpl implements ITransactionService {
+	
+	Logger logger = LoggerFactory.getLogger(TransactionServiceImpl.class);
+	
 	@Autowired
 	private SavingsAccountRepository savingsAccountRepo;
 	@Autowired
@@ -36,6 +41,7 @@ public class TransactionServiceImpl implements ITransactionService {
 	@Override
 	public String betweenAccountsTransfer(int senderAccountNo, int receiverAccountNo, Double amount)
 	{
+		logger.debug("Debug Occured");
 		if(senderAccountNo==receiverAccountNo)
 			return "Your and Beneficiary account numbers must be Different";
 		SavingsAccount senderAccount=new SavingsAccount();
@@ -72,6 +78,7 @@ public class TransactionServiceImpl implements ITransactionService {
 
 	@Override
 	public List<SavingsTransaction> getAllTransactions() {
+		logger.debug("Debug Occured");
 		return savingsTransactionRepo.findAll();
 	}
 

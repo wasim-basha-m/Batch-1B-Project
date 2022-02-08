@@ -18,20 +18,20 @@ public class SavingsAccServiceTest {
 
 	@Autowired
 	SavingsAccountImpl savingsAccountImpl;
-	
+
 	@MockBean
 	SavingsAccountRepository savingsAccountRepository;
-	
+
 	@Test
-	public void addAccountDetailsTest(){
-		SavingsAccount sAcc =new SavingsAccount();
+	public void addAccountDetailsTest() {
+		SavingsAccount sAcc = new SavingsAccount();
 		sAcc.setAccountBalance(10000D);
 		sAcc.setAccountId(23);
 		sAcc.setAccountNumber(834843);
 		sAcc.setBranchName("chennai");
 		sAcc.setCifNo(88383838L);
 		sAcc.setIfscCode(8348349L);
-		Customer cust =new Customer();
+		Customer cust = new Customer();
 		cust.setCustomerId(2);
 		cust.setEmail("faraaz@gmail.com");
 		cust.setFirstName("faraaz");
@@ -39,12 +39,11 @@ public class SavingsAccServiceTest {
 		cust.setMobileNo("8348343");
 		cust.setPassword("82382");
 		sAcc.setCustomer(cust);
-		
+
 		when(savingsAccountRepository.save(sAcc)).thenReturn(sAcc);
-		
-		assertEquals(true,savingsAccountImpl.addAccountDetails(sAcc));
-		
-		
+
+		assertEquals(true, savingsAccountImpl.addAccountDetails(sAcc));
+
 	}
-	
+
 }

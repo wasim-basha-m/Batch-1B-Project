@@ -44,11 +44,8 @@ public class RegistryController {
 	@PostMapping("/register")
 	public ResponseEntity<String> createNewRegister(@RequestBody BillerRegister billerRegister) {
 		String strCreateStatus = "Biller Registered Succesfully";
+		logger.debug("Debug Occured");
 		registerService.createNewRegistry(billerRegister);
-		logger.error("error happened");
-		logger.debug("debug needed");
-		logger.warn("warning");
-		logger.info("infor message");
 		return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
 
 	}
@@ -56,10 +53,7 @@ public class RegistryController {
 	// TO FIND AN REGISTER BILLER BY ID
 	@GetMapping("/register/{id}")
 	public ResponseEntity<BillerRegister> readRegister(@PathVariable long id) {
-		logger.error("error happened");
-		logger.debug("debug needed");
-		logger.warn("warning");
-		logger.info("infor message");
+		logger.debug("Debug Occured");
 		BillerRegister billerRegister = registerService.findById(id);
 		return ResponseEntity.ok(billerRegister);
 	}
@@ -69,10 +63,7 @@ public class RegistryController {
 	@PostMapping("/provider")
 	public ResponseEntity<String> createNewProvider(@RequestBody BillerProvider billerProvider) {
 		String strCreateStatus = "Biller Provided Succesfully";
-		logger.error("error happened");
-		logger.debug("debug needed");
-		logger.warn("warning");
-		logger.info("infor message");
+		logger.debug("Debug Occured");
 		providerService.createNewProvider(billerProvider);
 		return ResponseEntity.status(HttpStatus.CREATED).body(strCreateStatus);
 	}
@@ -80,10 +71,7 @@ public class RegistryController {
 	// TO READ AN EXISTING PROVIDER BY ID
 	@GetMapping("/provider/{id}")
 	public ResponseEntity<BillerProvider> readProvider(@PathVariable long id) {
-		logger.error("error happened");
-		logger.debug("debug needed");
-		logger.warn("warning");
-		logger.info("infor message");
+		logger.debug("Debug Occured");
 		BillerProvider billerProvider = providerService.findBillerProviderById(id);
 		return ResponseEntity.ok(billerProvider);
 	}
@@ -94,10 +82,7 @@ public class RegistryController {
 	public ResponseEntity<List<BillerStatement>> listAllBillerStatement()
 
 	{
-		logger.error("error happened");
-    	logger.debug("debug needed");
-    	logger.warn("warning");
-    	logger.info("infor message");
+		logger.debug("Debug Occured");
 		List<BillerStatement> billerStatement = statementService.listAllBillerStatement();
 		return ResponseEntity.ok(billerStatement);
 

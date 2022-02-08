@@ -21,20 +21,14 @@ public class RegisterService {
 
 	public long createNewRegistry(BillerRegister billerRegister) {
 		// TODO Auto-generated method stub
-		logger.error("error happened");
-    	logger.debug("debug needed");
-    	logger.warn("warning");
-    	logger.info("infor message");
+		logger.debug("Debug Occured");
 		registerRepository.save(billerRegister);
 		return billerRegister.getId();
 	}
 
 	public BillerRegister findById(long id) {
 		// TODO Auto-generated method stub
-		logger.error("error happened");
-    	logger.debug("debug needed");
-    	logger.warn("warning");
-    	logger.info("infor message");
+		logger.debug("Debug Occured");
 		return registerRepository.findBillerRegisterById(id);
 	}
 

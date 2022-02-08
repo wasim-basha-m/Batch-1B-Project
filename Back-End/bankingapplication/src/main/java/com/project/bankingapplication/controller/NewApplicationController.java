@@ -8,6 +8,8 @@ package com.project.bankingapplication.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,17 +26,21 @@ import com.project.bankingapplication.entity.NewApplication;
 @RequestMapping("/newapplication")
 public class NewApplicationController {
 
+	Logger logger = LoggerFactory.getLogger(NewApplicationController.class);
 
 	@Autowired
 	private NewApplicationRepository newApplicationRepository;
-	
+
 	@GetMapping("/allaccounts")
-	public List<NewApplication> getAllRequest(){
+	public List<NewApplication> getAllRequest() {
+		logger.debug("Debug Occured");
 		return newApplicationRepository.findAll();
 	}
-	//build create Rest api
+
+	// build create Rest api
 	@PostMapping("/create")
 	public NewApplication createAccount(@RequestBody NewApplication accountopen) {
+		logger.debug("Debug Occured");
 		return newApplicationRepository.save(accountopen);
 	}
 }

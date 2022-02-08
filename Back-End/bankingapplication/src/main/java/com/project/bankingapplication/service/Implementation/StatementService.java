@@ -11,22 +11,17 @@ import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.BillerStatement;
 import com.project.bankingapplication.repo.StatementRepository;
 
-
-
 @Service
 public class StatementService {
-	
+
 	Logger logger = LoggerFactory.getLogger(StatementService.class);
-	
+
 	@Autowired
 	StatementRepository statementRepository;
 
 	public List<BillerStatement> listAllBillerStatement() {
 		// TODO Auto-generated method stub
-		logger.error("error happened");
-    	logger.debug("debug needed");
-    	logger.warn("warning");
-    	logger.info("infor message");
+		logger.debug("Debug Occured");
 		return statementRepository.findAll();
 	}
 
