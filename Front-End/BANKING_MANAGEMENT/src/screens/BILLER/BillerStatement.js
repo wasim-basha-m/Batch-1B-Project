@@ -49,7 +49,6 @@ const BillerStatement = () => {
                 <td> Amount</td>
                 <td> Type</td>
                 <td> Transaction Id</td>
-                <td> Time Stamp</td>
               </tr>
             </thead>
 
@@ -63,7 +62,6 @@ const BillerStatement = () => {
                       <td> {lst.amount}</td>
                       <td> {lst.type}</td>
                       <td> {lst.transIdFk}</td>
-                      <td> {lst.timeStamp}</td>
                     </tr>
                   </>
                 ))
