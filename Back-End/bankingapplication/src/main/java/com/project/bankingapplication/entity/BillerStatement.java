@@ -1,5 +1,7 @@
 package com.project.bankingapplication.entity;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,17 +42,26 @@ public class BillerStatement {
 //	@JoinColumn(name ="Trans_Id_Fk",nullable = false)
 //	private BillerStatment billerStatement;
 
+	static LocalDate localDate;
+	public static LocalDate getTimeStamp() {
+		localDate = localDate.now();
+		return localDate;
+	}
+	
 	@Column(name = "TimeStamp")
-	public long timeStamp;
-
-	public BillerStatement(long accNumber, String type, int amount, long transIdFk, long timeStamp) {
-		super();
+	private LocalDate timeStamp;
+	public BillerStatement(long accNumber, String type, int amount, long transIdFk, LocalDate timeStamp) {
+		super(); 
 		this.accNumber = accNumber;
 		this.type = type;
 		this.amount = amount;
 		this.transIdFk = transIdFk;
 		this.timeStamp = timeStamp;
 	}
+	
+	
+
+	
 
 //	@ManyToMany(fetch = FetchType.LAZY)
 //	@JoinColumn(name ="Amount_Fk",nullable = false)
