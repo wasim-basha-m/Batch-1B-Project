@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.bankingapplication.repo.LoginRepository;
-import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.Login;
 import com.project.bankingapplication.service.Interfaces.ILoginService;
 

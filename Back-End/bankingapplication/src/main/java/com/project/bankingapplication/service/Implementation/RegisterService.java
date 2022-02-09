@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.BillerRegister;
 import com.project.bankingapplication.repo.RegisterRepository;
 

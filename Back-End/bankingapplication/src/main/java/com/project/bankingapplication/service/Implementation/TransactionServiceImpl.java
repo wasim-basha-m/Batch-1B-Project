@@ -17,7 +17,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.bankingapplication.repo.CustomerRepository;
 import com.project.bankingapplication.repo.SavingsAccountRepository;
 import com.project.bankingapplication.repo.SavingsTransactionRepository;
 import com.project.bankingapplication.entity.SavingsAccount;
@@ -35,9 +34,6 @@ public class TransactionServiceImpl implements ITransactionService {
 	@Autowired
 	private SavingsTransactionRepository savingsTransactionRepo;
 	
-	@Autowired
-	private CustomerRepository customerRepo;
-
 	@Override
 	public String betweenAccountsTransfer(int senderAccountNo, int receiverAccountNo, Double amount)
 	{

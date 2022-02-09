@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.BillerProvider;
 import com.project.bankingapplication.repo.ProviderRepository;
 
@@ -19,10 +18,7 @@ public class ProviderService {
 
 	public long createNewProvider(BillerProvider billerProvider) {
 		// TODO Auto-generated method stub
-		logger.error("error happened");
-		logger.debug("debug needed");
-		logger.warn("warning");
-		logger.info("infor message");
+		logger.debug("Debug Occured");
 		providerRepository.save(billerProvider);
 		return billerProvider.getId();
 
@@ -30,10 +26,7 @@ public class ProviderService {
 
 	public BillerProvider findBillerProviderById(long id) {
 		// TODO Auto-generated method stub
-		logger.error("error happened");
-		logger.debug("debug needed");
-		logger.warn("warning");
-		logger.info("infor message");
+		logger.debug("Debug Occured");
 		return providerRepository.findBillerProviderById(id);
 	}
 

@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.bankingapplication.repo.SavingsAccountRepository;
-import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.SavingsAccount;
 import com.project.bankingapplication.service.Interfaces.ISavingsAccountService;
 

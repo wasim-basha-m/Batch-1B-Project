@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import com.project.bankingapplication.controller.RegistryController;
 import com.project.bankingapplication.entity.Customer;
 
 @Service

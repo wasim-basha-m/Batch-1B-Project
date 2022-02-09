@@ -27,11 +27,13 @@ public class BillerRegisterTest {
 	@Test
 	public void createNewRegistryTest() {
 		BillerRegister bReg = new BillerRegister();
+		bReg.setId(1L);
 		bReg.setBillerName("Airtel");
-		bReg.setConsumerNumber(328239);
+		bReg.setConsumerNumber(328239L);
 
 		when(registerRepository.save(bReg)).thenReturn(bReg);
 		
-		assertEquals(registerService.createNewRegistry(bReg),0);
+		assertEquals(bReg.getId(), registerService.createNewRegistry(bReg));
+		//asserEqual(expedted value,,actual value) will check whther the service layer is passed or not . 
 	}
 }
