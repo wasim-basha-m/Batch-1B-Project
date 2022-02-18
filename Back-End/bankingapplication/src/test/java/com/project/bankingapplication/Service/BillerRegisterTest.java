@@ -32,8 +32,7 @@ public class BillerRegisterTest {
 		bReg.setConsumerNumber(328239L);
 
 		when(registerRepository.save(bReg)).thenReturn(bReg);
-		
 		assertEquals(bReg.getId(), registerService.createNewRegistry(bReg));
-		//asserEqual(expedted value,,actual value) will check whther the service layer is passed or not . 
+		 
 	}
 }

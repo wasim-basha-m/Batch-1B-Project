@@ -31,6 +31,7 @@ public class BillerProviderTest {
 		when(providerRepository.save(bPro)).thenReturn(bPro);
 		
 		assertEquals(providerService.createNewProvider(bPro),0);
+		//asserEqual(expedted value,,actual value) will check whther the service layer is passed or not .
 	}
 	
 	

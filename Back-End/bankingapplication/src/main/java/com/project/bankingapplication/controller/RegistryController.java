@@ -60,6 +60,9 @@ public class RegistryController {
 	@GetMapping("/register/{id}")
 	public ResponseEntity<BillerRegister> readRegister(@PathVariable long id) {
 		logger.debug("Debug Occured");
+		logger.warn("warn");
+		logger.info("info");
+		
 		BillerRegister billerRegister = registerService.findById(id);
 		return ResponseEntity.ok(billerRegister);
 	}
