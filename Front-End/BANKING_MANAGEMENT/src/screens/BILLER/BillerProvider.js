@@ -59,27 +59,11 @@ function BillerProvider(props) {
                 <TextField
                 required
                   label="Account Number"
-                  placeholder={cust.savingsAccount.accountNumber}
+                  placeholder="acc num"
                   value={accNumber}
                   onChange={(e) => setAccNumber(e.target.value)}
                 />
             </Box>
-            {/* <FormControl variant="filled" fullWidth>
-              <InputLabel>Acc Number</InputLabel>
-              <Select
-                labelId="demo-simple-select-filled-label"
-                id="demo-simple-select-filled"
-                fullWidth
-                value={accNumber}
-                onChange={(e) => setAccNumber(e.target.value)}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value="101">101</MenuItem>
-                <MenuItem value="102">102</MenuItem>
-              </Select>
-            </FormControl> */}
           </Box>
           <Box id="cons-number">
             <TextField
