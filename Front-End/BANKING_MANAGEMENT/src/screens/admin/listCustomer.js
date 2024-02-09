@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./listCustomer.css";
 
 import { Delete } from "@material-ui/icons";
 
@@ -40,11 +41,11 @@ const ListCustomer = (props) => {
   };
 
   return (
-    <Card className={"border border-dark bg-dark text-white"}>
+    <Card id="cards">
       <Card.Header>List Of All Customers</Card.Header>
       <Card.Body>
         <div>
-          <Table bordered hover striped variant="dark">
+          <Table >
             <thead className="text-white">
               <tr>
                 <th>First Name</th>

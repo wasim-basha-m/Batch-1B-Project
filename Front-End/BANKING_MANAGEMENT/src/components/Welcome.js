@@ -12,7 +12,7 @@ class Welcome extends Component {
     return (
       <Container className="mainbg">
     
-      <div className="BankName"> <center><h1 id="head1">WELCOME TO COLLABERA BANK</h1></center></div>
+      <div className="BankName"> <center><h1 id="head1">WELCOME TO MADRAS UNIVERSITY BANK</h1></center></div>
   
        
       <br/>

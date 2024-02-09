@@ -4,6 +4,7 @@ import { Card, Table } from "react-bootstrap";
 
 import { useDispatch, useSelector } from "react-redux";
 import { FetchTransList } from "../../actions/adminActions/adminActions";
+import "./listTransaction.css";
 
 const ListTransaction = (props) => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const ListTransaction = (props) => {
       <Card.Header><h2>List Of All Transaction</h2></Card.Header>
       <Card.Body>
         <div>
-          <Table bordered hover striped variant="dark">
+          <Table >
             <thead className="text-white">
               <tr>
                 <th>Id</th>

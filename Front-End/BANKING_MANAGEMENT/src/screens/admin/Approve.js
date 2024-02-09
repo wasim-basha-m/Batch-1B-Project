@@ -97,7 +97,7 @@ function Approve(props) {
       <Card.Header>List Of Application</Card.Header>
       <Card.Body>
         <div>
-          <Table bordered hover striped variant="dark">
+          <Table>
             <thead className="text-white">
               <tr>
                 <th>Title</th>
